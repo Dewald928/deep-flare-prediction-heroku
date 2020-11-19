@@ -5,12 +5,12 @@ from datetime import datetime
 import pandas as pd
 import drms
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./templates')
 
 
 @app.route('/predict', methods=['GET','POST'])
 def predict():
-    if request.method == 'POST':
+    if request.method == 'GET':
         # 1 load data
         HARP = int(request.args.get('harp'))
         T_REC = str(request.args.get('time'))
@@ -30,4 +30,6 @@ def predict():
             return jsonify(data)
         except:
             return jsonify({'error', 'error during prediction'})
+    else:
+        return jsonify({"error": 'GET or POST is wrong'})
 
