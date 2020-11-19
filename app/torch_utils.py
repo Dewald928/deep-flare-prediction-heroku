@@ -88,7 +88,6 @@ model.eval()
 # todo get data
 def get_ar_data(HARP, T_REC):
     c = drms.Client()
-    # T_REC = '$'
     series_sharp = 'hmi.sharp_cea_720s_nrt'
     ids = ['T_REC', 'NOAA_AR', 'HARPNUM', 'CRVAL1', 'CRVAL2', 'CRLN_OBS',
            'CRLT_OBS', 'LAT_FWT', 'LON_FWT']
