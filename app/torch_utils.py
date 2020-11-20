@@ -5,6 +5,7 @@ import drms
 import sklearn
 import joblib
 import pandas as pd
+import requests
 from datetime import datetime
 import torchvision.transforms as transforms
 from PIL import Image
@@ -96,13 +97,26 @@ def get_harp_numbers(T_REC):
               'MEANGBH']
     try:
         data_sharp = c.query('%s[][%s]' % (series_sharp,
-                                             T_REC,
-                                             ),
+                                           T_REC,
+                                           ),
                              key=ids + sharps)
         harp_list = data_sharp['HARPNUM'].unique()
     except:
         harp_list = []
     return harp_list
+
+
+def get_ar_image(T_REC):
+    # http://jsoc.stanford.edu/data/hmi/HARPs_def_images/2020/09/30/harp.2020.09.30_23:00:00_TAI.png
+    # for latest:
+    # http://jsoc.stanford.edu/doc/data/hmi/harp/harp_nrt/harp.2020.11.20_13:00:00_TAI.png
+    try:
+        im = requests.get(f'http://jsoc.stanford.edu/doc/data/hmi/harp/harp_nrt/harp.{T_REC}.png', stream=True)
+    except:
+        im = requests.get(
+            f'http://jsoc.stanford.edu/data/hmi/HARPs_def_images/{T_REC[:4]}/{T_REC[5:7]}/{T_REC[8:10]}/harp.{T_REC}.png')
+
+    return im
 
 
 # todo get data

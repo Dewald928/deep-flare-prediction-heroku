@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<h1>Flare prediction with deep neural networks</h1>
-<p><img src="http://jsoc.stanford.edu/doc/data/hmi/harp/harp_nrt/latest_nrt.png" alt="HARP image" width="700"
-        height="700"/></p>
-<table>
-    <tbody>
-    <tr>
-        <td>HARP</td>
-        <td>Prediction</td>
-    </tr>
-    <tr>
-        <td>6187</td>
-        <td>xx</td>
-    </tr>
-    <tr>
-        <td>xx</td>
-        <td>xx</td>
-    </tr>
-    </tbody>
-</table>
+<head>
+    <title>Flare prediction with deep neural networks</title>
+    <link rel=”stylesheet” href="{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+<p><img src="http://jsoc.stanford.edu/doc/data/hmi/harp/harp_nrt/latest_nrt.png" alt="HARP image" width="700"/></p>
+
+
+{% for table in tables %}
+{{ table|safe }}
+{% endfor %}
+</body>
+
 </html>
