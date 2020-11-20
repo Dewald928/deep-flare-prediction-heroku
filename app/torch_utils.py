@@ -85,6 +85,26 @@ model.load_state_dict(torch.load(PATH, map_location='cpu'))
 model.eval()
 
 
+def get_harp_numbers(T_REC):
+    c = drms.Client()
+    series_sharp = 'hmi.sharp_cea_720s_nrt'
+    ids = ['T_REC', 'NOAA_AR', 'HARPNUM', 'CRVAL1', 'CRVAL2', 'CRLN_OBS',
+           'CRLT_OBS', 'LAT_FWT', 'LON_FWT']
+    sharps = ['USFLUX', 'SAVNCPP', 'TOTPOT', 'ABSNJZH', 'SHRGT45', 'AREA_ACR',
+              'R_VALUE', 'TOTUSJH', 'TOTUSJZ', 'MEANJZH', 'MEANJZD', 'MEANPOT',
+              'MEANSHR', 'MEANALP', 'MEANGAM', 'MEANGBZ', 'MEANGBT',
+              'MEANGBH']
+    try:
+        data_sharp = c.query('%s[][%s]' % (series_sharp,
+                                             T_REC,
+                                             ),
+                             key=ids + sharps)
+        harp_list = data_sharp['HARPNUM'].unique()
+    except:
+        harp_list = []
+    return harp_list
+
+
 # todo get data
 def get_ar_data(HARP, T_REC):
     c = drms.Client()
