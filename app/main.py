@@ -21,10 +21,13 @@ def render_page():
     for harp in harp_list:
         resp = requests.get(f"{url_root}predict?harp={harp}&time={T_REC}").json()
         pred_df = pred_df.append(resp, ignore_index=True)
-        print(resp)
-        print(pred_df)
+    print(pred_df)
 
-    return render_template('index.html',  tables=[pred_df.to_html(classes='data', header="true")])
+    df = pred_df.loc[:, ['HARP']]
+    df['Probability'] = (pred_df['prediction'].round(2)*100).astype(str) + ' %'
+    df['HARP'] = df['HARP'].astype(int)
+
+    return render_template('index.html',  tables=[df.to_html(classes='data', header="true")])
     # return pred_df.to_json()
 
 
