@@ -24,7 +24,7 @@ def render_page():
     print(pred_df)
 
     df = pred_df.loc[:, ['HARP']]
-    df['Probability'] = (pred_df['prediction'].round(2)*100).astype(str) + ' %'
+    df['Probability'] = pred_df["prediction"].apply(lambda x: f'{x*100:.0f} %')
     df['HARP'] = df['HARP'].astype(int)
 
     return render_template('index.html',  tables=[df.to_html(classes='data', header="true")])
