@@ -32,6 +32,7 @@ body {
 h1, p, ol, h3 {
     color: #fff;
     text-align: center;
+    text-shadow: 2px 2px #713535;
 }
 
 .about h1, p, ol, h3 {
