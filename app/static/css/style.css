@@ -38,6 +38,7 @@ h1, p, ol, h3 {
 .about h1, p, ol, h3 {
     color: #000000;
     text-align: center;
+    text-shadow: none;
 }
 
 th {
