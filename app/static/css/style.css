@@ -1,7 +1,15 @@
+/*html {*/
+/*    background: rgb(255, 255, 255);*/
+/*    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);*/
+/*}*/
+
 body {
     margin: 0;
-    background-color: #8e8e8e;
+    /*background-color: #8e8e8e;*/
+    background: rgb(101, 101, 101);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
+
 
 .nav-site {
     background-color: #333;
@@ -23,6 +31,11 @@ body {
 
 h1, p, ol, h3 {
     color: #fff;
+    text-align: center;
+}
+
+.about h1, p, ol, h3 {
+    color: #000000;
     text-align: center;
 }
 
@@ -48,14 +61,10 @@ table {
     width: 100%;
 }
 
-h1, p, ol, h3 {
-    color: #fff;
+a {
     text-align: center;
+/*     text-decoration: none; */
+    color: #227100;
+    list-style-type: none;
 }
 
-
-ul li a {
-    text-decoration: none;
-    color: #1502ff;
-
-}
