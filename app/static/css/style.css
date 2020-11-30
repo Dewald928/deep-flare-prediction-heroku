@@ -13,23 +13,24 @@ body {
     float: left;
     text-decoration: none;
     text-align: center;
-    color:#fff;
-    padding:10px;
+    color: #fff;
+    padding: 10px;
 }
 
 .nav-site a:hover {
     background-color: #41cc48;
 }
 
-h1,p,ol,h3{
+h1, p, ol, h3 {
     color: #fff;
     text-align: center;
 }
 
 th {
-  background-color: #c32020;
-  color: white;
-  white-space: nowrap;
+    text-align: center;
+    background-color: #c32020;
+    color: white;
+    white-space: nowrap;
 }
 
 
@@ -37,7 +38,7 @@ th {
     text-align: center;
     margin: auto;
     width: 15%;
-/*     border: 3px solid green; */
+    /*     border: 3px solid green; */
     border-collapse: collapse;
 }
 
@@ -47,7 +48,7 @@ table {
     width: 100%;
 }
 
-h1,p,ol,h3{
+h1, p, ol, h3 {
     color: #fff;
     text-align: center;
 }
@@ -55,6 +56,6 @@ h1,p,ol,h3{
 
 ul li a {
     text-decoration: none;
-    color:#1502ff;
+    color: #1502ff;
 
 }
