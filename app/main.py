@@ -6,8 +6,15 @@ import pandas as pd
 import drms
 import os
 import requests
+import sys
 
-app = Flask(__name__, template_folder='templates', static_url_path='/static')
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+app = Flask(__name__, static_url_path='/static')
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
 
 
 @app.route('/')
