@@ -30,9 +30,12 @@ def render_page():
         pred_df = pred_df.append(resp, ignore_index=True)
     print(pred_df)
 
-    df = pred_df.loc[:, ['HARP']]
-    df['Probability'] = pred_df["prediction"].apply(lambda x: f'{x*100:.0f} %')
-    df['HARP'] = df['HARP'].astype(int)
+    if not pred_df.empty:
+        df = pred_df.loc[:, ['HARP']]
+        df['Probability'] = pred_df["prediction"].apply(lambda x: f'{x*100:.0f} %')
+        df['HARP'] = df['HARP'].astype(int)
+    else:
+        df = pd.DataFrame()
 
     return render_template('index.html',  tables=[df.to_html(classes='data', header="true")])
     # return pred_df.to_json()
