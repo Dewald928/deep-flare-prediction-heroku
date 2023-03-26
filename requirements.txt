@@ -1,29 +1,39 @@
--f https://download.pytorch.org/whl/torch_stable.html
-certifi==2020.11.8
+brotlipy @ file:///home/conda/feedstock_root/build_artifacts/brotlipy_1666764671472/work
+certifi==2022.12.7
+cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1671179353105/work
 chardet==3.0.4
 click==7.1.2
-dataclasses==0.6
-drms==0.6.0
-Flask==1.1.2
-future==0.18.2
-gunicorn==20.0.4
-idna==2.10
+cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography-split_1677821274828/work
+drms @ file:///home/conda/feedstock_root/build_artifacts/drms_1605261378155/work
+filelock @ file:///home/conda/feedstock_root/build_artifacts/filelock_1679807057726/work
+Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1638480437950/work
+future @ file:///home/conda/feedstock_root/build_artifacts/future_1649010148175/work
+gmpy2 @ file:///home/conda/feedstock_root/build_artifacts/gmpy2_1666808654411/work
+gunicorn @ file:///home/conda/feedstock_root/build_artifacts/gunicorn_1666818649946/work
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
 itsdangerous==1.1.0
 Jinja2==2.11.2
-joblib==0.17.0
-MarkupSafe==1.1.1
-numpy==1.19.4
-pandas==1.1.4
-Pillow==8.0.1
+joblib==1.2.0
+MarkupSafe @ file:///home/conda/feedstock_root/build_artifacts/markupsafe_1654705957930/work
+mpmath @ file:///home/conda/feedstock_root/build_artifacts/mpmath_1678228039184/work
+networkx @ file:///home/conda/feedstock_root/build_artifacts/networkx_1673151334029/work
+numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1675642512762/work
+pandas==1.5.3
+Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1675487172403/work
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1679647854081/work
+PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1661604839144/work
 python-dateutil==2.8.1
-pytz==2020.4
-requests==2.25.0
-scikit-learn==0.22.2.post1
-scipy==1.5.4
-six==1.15.0
-threadpoolctl==2.1.0
-torch==1.7.0+cpu
-torchvision==0.8.1+cpu
-typing-extensions==3.7.4.3
-urllib3==1.26.2
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1604321279890/work
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1605186911681/work
+scikit-learn==1.2.2
+scipy==1.10.1
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+sympy @ file:///home/conda/feedstock_root/build_artifacts/sympy_1679342590084/work
+threadpoolctl @ file:///tmp/tmp79xdzxkt/threadpoolctl-2.1.0-py3-none-any.whl
+torch==2.0.0
+torchaudio==2.0.0
+torchvision==0.15.0
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1603125704209/work
 Werkzeug==1.0.1
