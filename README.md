@@ -4,14 +4,19 @@ Live flare prediction model on SHARP data
 ## Setup 
 https://realpython.com/flask-by-example-part-1-project-setup/#installing-dependencies
 
-1. Download and install conda
-2. Create environment with `conda env create --file conda-env.txt`
+1. Install venv
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+2. Install the requirements: `pip install -r requirements.txt`
 3. If that doesn't work create a conda env with python 3.10.10 and run `pip instal -r requirements.txt`
 
 ## Development
 1. Run flask in development mode: `FLASK_ENV=development flask run`
-2. Export env change with: `conda list -e > requirements.txt`
-3. `pip list --format=freeze > requirements.txt`
+2. Export pip list: `pipreqs app`
 
 
 ## Todo
